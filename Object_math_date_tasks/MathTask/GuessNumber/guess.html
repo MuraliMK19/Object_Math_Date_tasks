@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+<style>
+    * {
+        font-family: "Poppins";
+    }
+
+    .totaldiv {
+        border: 1px solid lightgray;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 80px;
+        width: 500px;
+        border-radius: 20px;
+        background-color: rgb(209, 155, 31, 0.5);
+    }
+
+    #answer {
+        height: 30px;
+        border-radius: 10px;
+        border: 1px solid lightgray;
+        outline: none;
+    }
+
+    #btnid {
+        height: 30px;
+        border-radius: 10px;
+        background-color: aqua;
+        border-style: none;
+        box-shadow: 0 0 2px gray;
+    }
+
+    #btnid:hover {
+        transform: scale(1.1);
+        transition: 0.2s;
+        cursor: pointer;
+        color: azure;
+    }
+
+    #num1,
+    #num2 {
+        font-size: 20px;
+        color: rgb(41, 38, 38);
+    }
+
+    .correct {
+        color: green;
+
+    }
+
+    @keyframes shake {
+        0% {
+            transform: rotate(-5deg);
+        }
+
+        25% {
+            transform: rotate(5deg);
+        }
+
+        50% {
+            transform: rotate(-5deg);
+        }
+
+        75% {
+            transform: rotate(5deg);
+        }
+
+        100% {
+            transform: rotate(-5deg);
+        }
+    }
+
+    .wrong {
+        color: red;
+        animation: shake 0.5s infinite;
+
+    }
+</style>
+
+<body>
+    <h1>Guess the Number</h1>
+    <div class="totaldiv">
+        <p id="num1">00</p>
+        <p>➕</p>
+        <p id="num2">00 </p>
+        <p>🟰</p>
+        <input type="text" id="answer">
+        <input type="button" value="SUBMIT" id="btnid">
+        <p id="message" class=""></p>
+    </div>
+
+    <script src="guessNumber.js"></script>
+</body>
+
+</html>
